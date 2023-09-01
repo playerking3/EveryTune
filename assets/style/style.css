@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
+/* font-family: 'Raleway', sans-serif; - texto
+font-family: 'Righteous', cursive; - titulo*/
+
+:root{
+    --pretoClaro: #313131;
+    --pretoEscuro: #282828;
+    --laranja: #FFA337;
+    --cinza: #ACACAC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Header --------------------------------------------------------------------------------------------------------------------------- */
+
+header {
+    background: var(--pretoClaro);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0px 0px 15px 15px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg{
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+.logoTexto{
+    color: var(--laranja);
+    font-family: 'Righteous', cursive;
+    cursor: default; 
+}
+
+header nav a{
+    color: var(--cinza);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+header nav a:hover{
+    border-bottom: 1px solid var(--laranja);
+}
+
+.searchreader .pesquisaLink{
+    font-weight: bold;
+    color: var(--laranja);
+}
+
+.contaLink {
+    color: var(--laranja);
+    font-size: 2rem;
+}
+
+.conta{
+    padding-left: 1rem;
+    border-left: solid 2px var(--cinza);
+}
