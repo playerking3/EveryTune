@@ -15,6 +15,9 @@ font-family: 'Righteous', cursive; - titulo*/
     font-family: 'Raleway', sans-serif;
 }
 
+body{
+    background: var(--pretoEscuro);
+}
 /* Header --------------------------------------------------------------------------------------------------------------------------- */
 
 header {
@@ -64,4 +67,55 @@ header nav a:hover{
 .conta{
     padding-left: 1rem;
     border-left: solid 2px var(--cinza);
+}
+
+/*search main -------------------------------------------------------------------------------------------------------------------*/
+
+.searchmain{
+    display: block;
+}
+
+.titulo{
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: xx-large;
+}
+.laranjaTexto{
+    color: var(--laranja);
+    font-family: 'Righteous', cursive;
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.searchbar{
+    margin: 1.6rem;
+    padding: 0.4rem;
+    width: 28%;
+    border: solid 2px var(--cinza);
+    border-radius: 2em;
+}
+
+#searchForm{
+    display: flex;
+    justify-content: space-between;
+}
+
+#search{
+    background: transparent;
+    color: var(--cinza);
+    border: none;
+    width: 100%;
+    font-size: large;
+}
+
+#search:active, #search:autofill{
+    background: transparent;
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
