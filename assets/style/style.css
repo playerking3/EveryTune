@@ -114,8 +114,93 @@ header nav a:hover{
     font-size: large;
 }
 
-#search:active, #search:autofill{
+#lupa{
     background: transparent;
-    box-shadow: 0 0 0 0;
-    outline: 0;
+    color: var(--cinza);
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.resultado{
+    text-align: center;
+}
+
+.nome{
+    font-family: 'Righteous', cursive;
+    color: white;
+    margin: 8px;
+}
+
+
+.box, .caixa{
+    position: absolute;
+    width: 100%;
+    transition: 1s;
+}
+
+.caixa{
+    height: 325px;
+}
+
+#capa{
+    position: absolute;
+    top: 10%;
+    left: 43%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+    border-radius: 4px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#disco{
+    position: absolute;
+    top: 10%;
+    left: 57%;
+    transform: translate(-50%, 0%);
+/*    animation-delay: 1s;*/
+    animation-duration: 2s;
+
+}
+
+.box img{
+    width: 325px;
+    height: 325px;
+}
+
+@keyframes slideOut{
+    80%{
+        opacity: 0%;
+    }
+    100%{
+        left: 0;
+        opacity: 0%;
+    }
+}
+
+@keyframes slideIn{
+    0%{
+        left: 0;
+        opacity: 0%;
+    }
+    80%{
+        left: 43%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.info{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+}
+
+.info p{
+    color: white;
 }

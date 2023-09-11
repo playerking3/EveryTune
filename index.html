@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/style/responsive.css">
     <script defer src="assets/script/indexScript.js"></script>
     <script src="https://kit.fontawesome.com/9879f90344.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <title>EveryTune | Search</title>
 </head>
 <body>
@@ -32,21 +33,25 @@
             <h1 class="titulo">Navegue pelo <span class="laranjaTexto">Universo musical</span></h1>
             <div class="searchbar">
                 <form action="" id="searchForm">
-                    <input type="text" name="search" id="search" placeholder="Ex: Waiting for love">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" name="search" id="search" placeholder="Ex: Waiting for love" autocomplete="off">
+                    <button type="submit" id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>      
             </div>    
         </section>
         <section class="resultado">
             <h3 class="nome">Waiting for love</h3>
-            <div class="disco">
-                <img src="assets/img/capaLogo.png" alt="Capa de disco de vinil EveryTune">
-                <img src="assets/img/disco.png" alt="disco de vinil EveryTune">
-            </div>
-            <div class="info">
-                <p><span class="laranjaTexto">Artista: </span>Avicii</p>
-                <p><span class="laranjaTexto">Album: </span>Stories</p>
-                <p><span class="laranjaTexto">Duração: </span>3:50</p>
+            <div class="caixa">
+                <div class="box" id="box">
+                    <img src="assets/img/capaLogo.png" alt="Capa de disco de vinil EveryTune" id="capa">
+                    <img src="assets/img/disco.png" alt="disco de vinil EveryTune" id="disco">
+
+                </div>
+                <div class="info">
+                    <p><span class="laranjaTexto">Artista: </span>Avicii</p>
+                    <p><span class="laranjaTexto">Album: </span>Stories</p>
+                    <p><span class="laranjaTexto">Duração: </span>3:50</p>
+                    <p>Tocar prévia</p>
+                </div>
             </div>
         </section>
     </main>
