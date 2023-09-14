@@ -112,6 +112,7 @@ header nav a:hover{
     border: none;
     width: 100%;
     font-size: large;
+    outline: none;
 }
 
 #lupa{
@@ -193,14 +194,31 @@ header nav a:hover{
 
 .info{
     position: absolute;
-    top: 10%;
-    left: 55%;
+    top: 0%;
+    left: 62%;
     transform: translate(-50%, 0%);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 100%;
+    align-items: center;
 }
 
-.info p{
+#artista, #album, #duracao{
     color: white;
+}
+
+.frente{
+    transform: translateX(45%);
+    text-align: start;
+}
+
+/* Estilização de botão --------------------------------------------------------------------------------- */
+.btn1{
+    border-radius: 8px;
+    background: #4D4D4D;
+    height: fit-content;
+    padding: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

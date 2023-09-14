@@ -39,18 +39,18 @@
             </div>    
         </section>
         <section class="resultado">
-            <h3 class="nome">Waiting for love</h3>
+            <h3 class="nome" id="musicaNome">Waiting for love</h3>
             <div class="caixa">
                 <div class="box" id="box">
                     <img src="assets/img/capaLogo.png" alt="Capa de disco de vinil EveryTune" id="capa">
                     <img src="assets/img/disco.png" alt="disco de vinil EveryTune" id="disco">
-
+                    <audio src="" id="playerprevia"></audio>
                 </div>
                 <div class="info">
-                    <p><span class="laranjaTexto">Artista: </span>Avicii</p>
-                    <p><span class="laranjaTexto">Album: </span>Stories</p>
-                    <p><span class="laranjaTexto">Duração: </span>3:50</p>
-                    <p>Tocar prévia</p>
+                    <p class="laranjaTexto">Artista: <span id="artista">Avicii</span></p>
+                    <p class="laranjaTexto frente">Album: <span id="album">Stories</span></p>
+                    <p class="laranjaTexto frente">Duração: <span id="duracao">3:50</span></p>
+                    <button id="previa" class="btn1" onclick="playpause(this)"><i class="fa-solid fa-play"></i> Tocar prévia</button>
                 </div>
             </div>
         </section>
