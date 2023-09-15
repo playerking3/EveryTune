@@ -44,15 +44,16 @@ function playpause(element){
 		player.play()
 		element.innerHTML = '<i class="fa-solid fa-pause"></i> Tocar prévia'
 	}
-	progress(player)
+	progress(player, element)
 }
 
-function progress(player){
+function progress(player, element){
 	player.addEventListener('timeupdate', () =>{
 		let total = player.duration
 		let atual = player.currentTime
 		let porcentagem = (atual*100)/total
 		console.log(porcentagem)
+		element.style.background = "linear-gradient(90deg, rgba(255,163,55,1) "+porcentagem+"%, rgba(77,77,77,1) "+porcentagem+"%)"
 	})
 }
 
