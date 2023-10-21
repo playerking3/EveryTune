@@ -11,13 +11,11 @@ pesquisa.addEventListener("submit",  function(event) {
 
 function APIRequest(musica){
 	let disco = document.getElementById("disco")
-	let url = "https://api.deezer.com/search/track?q="+musica
+	let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q="+musica
 	capa.style.animationName = 'slideOut'
 	$("#disco").animate({"left": "50%"})
 	document.getElementById("box").style.transform = "translateX(0%)"
-	fetch(url,{
-		Access-Control-Allow-Origin: *
-	})
+	fetch(url)
 
         .then(function(response){
         	console.log('esperando')
