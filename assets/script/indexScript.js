@@ -15,7 +15,9 @@ function APIRequest(musica){
 	capa.style.animationName = 'slideOut'
 	$("#disco").animate({"left": "50%"})
 	document.getElementById("box").style.transform = "translateX(0%)"
-	fetch(url)
+	fetch(url,{
+		Access-Control-Allow-Origin: *
+	})
 
         .then(function(response){
         	console.log('esperando')
