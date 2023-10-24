@@ -1,6 +1,7 @@
 let pesquisa = document.getElementById("searchForm")
 let capa = document.getElementById("capa")
 let player = document.getElementById("playerprevia")
+let info = document.getElementsByClassName("info")
 
 pesquisa.addEventListener("submit",  function(event) {
 	event.preventDefault()
@@ -13,6 +14,7 @@ function APIRequest(musica){
 	let disco = document.getElementById("disco")
 	let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q="+musica
 	capa.style.animationName = 'slideOut'
+	$(".info").fadeOut()
 	$("#disco").animate({"left": "50%"})
 	document.getElementById("box").style.transform = "translateX(0%)"
 	fetch(url)
@@ -33,6 +35,22 @@ function APIRequest(musica){
 			document.getElementById("musicaNome").innerHTML = data.data[0].title
 			document.getElementById("album").innerHTML = data.data[0].album.title
 			document.getElementById("duracao").innerHTML = formatDuration(data.data[0].duration)
+			setTimeout(()=>{
+				info[0].style.animationName = "slideIn2"
+				info[0].style.display = "inline-block"
+				setTimeout(()=>{
+					info[1].style.animationName = "slideIn2"
+					info[1].style.display = "inline-block"
+					setTimeout(()=>{
+						info[2].style.animationName = "slideIn2"
+						info[2].style.display = "inline-block"
+						setTimeout(()=>{
+							info[3].style.animationName = "slideIn2"
+							info[3].style.display = "inline-block"
+						}, 250)
+					}, 250)
+				}, 250)
+			}, 250)
         })
 }
 

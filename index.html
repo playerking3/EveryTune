@@ -33,24 +33,24 @@
             <h1 class="titulo">Navegue pelo <span class="laranjaTexto">Universo musical</span></h1>
             <div class="searchbar">
                 <form action="" id="searchForm">
-                    <input type="text" name="search" id="search" placeholder="Ex: Waiting for love" autocomplete="off">
+                    <input type="text" name="search" id="search" placeholder="Busque músicas" autocomplete="off">
                     <button type="submit" id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>      
             </div>    
         </section>
         <section class="resultado">
-            <h3 class="nome" id="musicaNome">Waiting for love</h3>
+            <h3 class="nome" id="musicaNome"></h3>
             <div class="caixa">
                 <div class="box" id="box">
                     <img src="assets/img/capaLogo.png" alt="Capa de disco de vinil EveryTune" id="capa">
                     <img src="assets/img/disco.png" alt="disco de vinil EveryTune" id="disco">
                     <audio src="" id="playerprevia"></audio>
                 </div>
-                <div class="info">
-                    <p class="laranjaTexto">Artista: <span id="artista">Avicii</span></p>
-                    <p class="laranjaTexto frente">Album: <span id="album">Stories</span></p>
-                    <p class="laranjaTexto frente">Duração: <span id="duracao">3:50</span></p>
-                    <button id="previa" class="btn1" onclick="playpause(this)"><i class="fa-solid fa-play"></i> Tocar prévia</button>
+                <div class="infoGrid">
+                    <p class="laranjaTexto info">Artista: <span id="artista">Avicii</span></p>
+                    <p class="laranjaTexto info frente">Album: <span id="album">Stories</span></p>
+                    <p class="laranjaTexto info frente">Duração: <span id="duracao">3:50</span></p>
+                    <button id="previa" class="btn1 info" onclick="playpause(this)"><i class="fa-solid fa-play"></i> Tocar prévia</button>
                 </div>
             </div>
         </section>

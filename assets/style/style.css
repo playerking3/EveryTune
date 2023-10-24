@@ -125,14 +125,10 @@ header nav a:hover{
 
 .nome{
     text-align: center;
-}
-
-.nome{
     font-family: 'Righteous', cursive;
     color: white;
     margin: 8px;
 }
-
 
 .box, .caixa{
     position: absolute;
@@ -159,7 +155,7 @@ header nav a:hover{
     top: 10%;
     left: 57%;
     transform: translate(-50%, 0%);
-/*    animation-delay: 1s;*/
+    animation-delay: 1s;
     animation-duration: 2s;
 
 }
@@ -192,7 +188,7 @@ header nav a:hover{
     }
 }
 
-.info{
+.infoGrid{
     position: absolute;
     top: 0%;
     left: 65%;
@@ -209,8 +205,37 @@ header nav a:hover{
 }
 
 .frente{
-    transform: translateX(25%);
+    transform: translate(25%, 0);
     text-align: start;
+}
+
+@keyframes slideOut2{
+    80%{
+        opacity: 0%;
+    }
+    100%{
+        left: -25%;
+        opacity: 0%;
+    }
+}
+
+@keyframes slideIn2{
+    0%{
+        left: -25%;
+        opacity: 0%;
+    }
+    80%{
+        left: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.info{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    display: none;
 }
 
 /* Estilização de botão --------------------------------------------------------------------------------- */
