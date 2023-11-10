@@ -238,6 +238,10 @@ header nav a:hover{
     display: none;
 }
 
+.tituloBox{
+    height: 1.8rem;
+}
+
 /* Estilização de botão --------------------------------------------------------------------------------- */
 .btn1{
     border-radius: 8px;
