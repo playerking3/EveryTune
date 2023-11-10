@@ -136,7 +136,7 @@ header nav a:hover{
     transition: 1s;
 }
 
-.caixa{
+.caixa, .caixao{
     height: 325px;
 }
 
@@ -240,6 +240,31 @@ header nav a:hover{
 
 .tituloBox{
     height: 1.8rem;
+}
+
+.maisResultados{
+    margin: 2rem;
+}
+.maisGrid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.cardImg{
+    position: relative;
+}
+
+.maisCapa{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+}
+
+.maisDisco{
+    z-index: -1;
 }
 
 /* Estilização de botão --------------------------------------------------------------------------------- */

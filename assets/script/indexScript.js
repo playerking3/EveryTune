@@ -11,7 +11,6 @@ pesquisa.addEventListener("submit",  function(event) {
 })
 
 function APIRequest(musica){
-	let disco = document.getElementById("disco")
 	let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q="+musica
 	capa.style.animationName = 'slideOut'
 	$(".info").fadeOut()
