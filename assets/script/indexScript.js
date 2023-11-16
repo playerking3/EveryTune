@@ -2,6 +2,9 @@ let pesquisa = document.getElementById("searchForm")
 let capa = document.getElementById("capa")
 let player = document.getElementById("playerprevia")
 let info = document.getElementsByClassName("info")
+let maisCapa = document.getElementsByClassName("capaResto")
+let maisNome = document.getElementsByClassName("maisNome")
+let maisCard = document.getElementsByClassName("maisCard")
 
 pesquisa.addEventListener("submit",  function(event) {
 	event.preventDefault()
@@ -50,6 +53,15 @@ function APIRequest(musica){
 					}, 250)
 				}, 250)
 			}, 250)
+			for (let i = 1; i < 6; i++) {
+				if (data.data[i] != undefined){
+					maisCard[i-1].style.display = "inline-block"
+					maisCapa[i-1].src = data.data[i].album.cover_big
+					maisNome[i-1].innerHTML = data.data[i].title	
+				}
+				maisCapa[i-1].src = data.data[i].album.cover_big
+				maisNome[i-1].innerHTML = data.data[i].title
+			}
         })
 }
 

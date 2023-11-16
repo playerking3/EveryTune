@@ -250,20 +250,28 @@ header nav a:hover{
     grid-template-columns: repeat(5,1fr);
 }
 
-.cardImg{
+.maisCard{
     position: relative;
+    display: none;
 }
 
 .maisCapa{
     width: 100%;
+}
+
+.cardImg{
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
 
 }
 
 .maisDisco{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     z-index: -1;
 }
 
