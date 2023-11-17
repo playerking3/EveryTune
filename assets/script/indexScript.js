@@ -13,8 +13,8 @@ pesquisa.addEventListener("submit",  function(event) {
 	APIRequest(nome)
 })
 
-function APIRequest(musica){
-	let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q="+musica
+function APIRequest(musica, route = "https://api.deezer.com/search/track?q=track:") {
+	let url = "https://cors-anywhere.herokuapp.com/"+ route +musica
 	capa.style.animationName = 'slideOut'
 	$(".info").fadeOut()
 	$("#disco").animate({"left": "50%"})
@@ -56,11 +56,13 @@ function APIRequest(musica){
 			for (let i = 1; i < 6; i++) {
 				if (data.data[i] != undefined){
 					maisCard[i-1].style.display = "inline-block"
+					maisCard[i-1].id = data.data[i].id
 					maisCapa[i-1].src = data.data[i].album.cover_big
 					maisNome[i-1].innerHTML = data.data[i].title	
+				}else{
+					maisCard[i-1].style.display = "none"
 				}
-				maisCapa[i-1].src = data.data[i].album.cover_big
-				maisNome[i-1].innerHTML = data.data[i].title
+				
 			}
         })
 }
@@ -91,4 +93,9 @@ function formatDuration(duration) {
     const seconds = Math.floor(duration % 60);
     const formattedDuration = `${minutes}:${seconds.toString().padStart(2, '0')}`;
     return formattedDuration;
+ }
+
+ function tocarOutra(element){
+	console.log(element.id)
+	APIRequest(element.id)
  }
