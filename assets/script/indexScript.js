@@ -13,8 +13,8 @@ pesquisa.addEventListener("submit",  function(event) {
 	APIRequest(nome)
 })
 
-function APIRequest(musica, route = "https://api.deezer.com/search/track?q=track:") {
-	let url = "https://cors-anywhere.herokuapp.com/"+ route +musica
+function APIRequest(musica) {
+	let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q="+musica
 	capa.style.animationName = 'slideOut'
 	$(".info").fadeOut()
 	$("#disco").animate({"left": "50%"})
@@ -93,9 +93,4 @@ function formatDuration(duration) {
     const seconds = Math.floor(duration % 60);
     const formattedDuration = `${minutes}:${seconds.toString().padStart(2, '0')}`;
     return formattedDuration;
- }
-
- function tocarOutra(element){
-	console.log(element.id)
-	APIRequest(element.id)
  }
